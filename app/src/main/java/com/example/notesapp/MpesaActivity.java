@@ -27,7 +27,7 @@ public class MpesaActivity extends AppCompatActivity {
 
     private static final String BASE_URL = "https://tinypesa.com/api/v1/";
 
-    private static final String PHONE_NUMBER = "+254748875966";
+    private static final String PHONE_NUMBER = "";
     private EditText phoneEdit, amountEdit, accountEdit;
     String location;
     String account;
@@ -71,7 +71,7 @@ public class MpesaActivity extends AppCompatActivity {
 
         DataModal dataModal = new DataModal(phone,amount, accountNo );
         String acceptHeader = "application/json";
-        String apikey = "UILUeVO6GBD";
+        String apikey = "";
         Call<DataModal> call = service.createPost(apikey,acceptHeader,dataModal);
 
         call.enqueue(new Callback<DataModal>() {
